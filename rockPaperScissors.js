@@ -6,15 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
     'paper',
     'scissors'
   ];
+  var turn = []
 
   var randomPossibility = possibilities[Math.floor(Math.random() * possibilities.length)];
   var readComputer = function(possibilities) {
     document.getElementById('read-computer').innerHTML = 'Computer played ' + randomPossibility;
-    var turn = []
     result = randomPossibility;
     turn.push({computer: result});
-    console.log(turn);
-
   };
 
   var readPlayer = function() {
